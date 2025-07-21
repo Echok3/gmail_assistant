@@ -1,5 +1,28 @@
-venv/
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.log
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Database
 db.sqlite3
-credentials/
+
+# OAuth credentials
+credentials/token.json
+credentials/credentials.json
