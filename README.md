@@ -2,6 +2,8 @@
 
 This is an intelligent email assistant built with Python and Gemini LLM, designed to help users classify emails, summarize inbox content, and generate smart replies based on user instructions.
 
+![App Screenshot](https://raw.githubusercontent.com/Echok3/gmail_assistant/main/assets/bg.png)
+
 ## 🔧 Features
 
 - 📥 **Fetch Emails**: Automatically fetch emails from Gmail using Gmail API.
