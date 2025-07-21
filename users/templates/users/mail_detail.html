@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+  <h2>{{ email.subject }}</h2>
+  <p><strong>From: </strong> {{ email.from }}</p>
+  <p><strong>Date: </strong> {{ email.date }}</p>
+  <hr>
+  <div>
+    <strong>Abstract:</strong>
+    {{ email.body|safe }}
+  </div>
+
+  <hr>
+  <h4>AI Reply Assistant</h4>
+  <form method="post" id="ai-form">
+    {% csrf_token %}
+    <textarea name="user_prompt" class="form-control mb-2" rows="3" placeholder="我想回信，内容是..."></textarea>
+    <button type="submit" class="btn btn-primary">Let Gemini write</button>
+  </form>
+
+{% if gemini_reply %}
+  <hr>
+  <h5>Reply draft written by Gemini:</h5>
+  <form method="post" class="mt-2">
+    {% csrf_token %}
+    <textarea name="reply_text" class="form-control" rows="10">{{ gemini_reply }}</textarea>
+    <input type="hidden" name="send_reply" value="1">
+    <button type="submit" class="btn btn-success mt-2">Submit</button>
+  </form>
+{% endif %}
+
+</div>
+{% endblock %}

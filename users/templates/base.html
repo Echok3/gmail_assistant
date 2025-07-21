@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}Gmail Assistant{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://unpkg.com/@tabler/core@1.0.0-beta20/dist/css/tabler.min.css" rel="stylesheet"/>
+</head>
+<body class="layout-fluid">
+  <!-- 顶部导航栏 -->
+  <div class="d-flex align-items-center p-3 bg-white border-bottom">
+    {% if show_back_button %}
+    <a href="{% url 'home' %}" class="btn btn-outline-primary me-3">← Back</a>
+    {% endif %}
+    <h4 class="mb-0">Gmail Assistant</h4>
+    <div class="ms-auto">
+      <a href="{% url 'logout' %}" class="btn btn-danger btn-sm">Logout</a>
+    </div>
+  </div>
+
+  <!-- 主体内容 -->
+  <main class="page-wrapper">
+    <div class="container-xl mt-4">
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+</body>
+</html>
