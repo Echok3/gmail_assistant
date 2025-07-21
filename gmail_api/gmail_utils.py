@@ -15,6 +15,7 @@ SCOPES = ['https://www.googleapis.com/auth/gmail.modify', 'https://www.googleapi
 
 def get_gmail_service():
     creds = None
+    # Get by your gmail account api
     token_path = 'credentials/token.json'
     cred_path = 'credentials/credentials.json'
 
