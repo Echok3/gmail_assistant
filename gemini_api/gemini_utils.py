@@ -1,8 +1,8 @@
 import google.generativeai as genai
 import re
 
-# 🔑 替换成你的 Gemini API Key
-GENAI_API_KEY = "AIzaSyA6wPCOZ654sd9Hb0B6NMqwvAnjkDbvqxo"
+# 🔑 Change your Gemini API Key
+GENAI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 genai.configure(api_key=GENAI_API_KEY)
 model = genai.GenerativeModel("models/gemini-2.0-flash")
 
